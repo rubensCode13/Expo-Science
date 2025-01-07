@@ -2,49 +2,49 @@
     "Animaux du Québec" : { 
         "Anodonte du gaspareau" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Bivalve",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Obovarie olivatre" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Bivalve",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Coccinelle à deux points" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Insecte",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Bourdon à tache rousse" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Insecte",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Coccinelle à neuf points" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Insecte",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Cuivré des marais salés" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Insecte",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Satyre fauve des Maritimes" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Insecte",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
@@ -149,308 +149,308 @@
         },
         "Salamandre pourpre" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Amphibien",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Rainette faux-grillon de l'Ouest" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Amphibien",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Salamandre sombre des montagnes" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Amphibien",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Tortue des bois" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Reptile",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Tortue géographique" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Reptile",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Couleuvre d'eau du Nord" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Reptile",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
-        "Couleuvre tahcetée" : {
+        "Couleuvre tachetée" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Reptile",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Tortue luth" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Reptile",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Tortue mouchetée" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Reptile",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Tortue musquée" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Reptile",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Tortue molle à épines" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Reptile",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Couleuvre brune" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Reptile",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Aigle royal" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Arlequin plongeur" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Engoulevent bois-pourris" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Faucon pèlerin anatum" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Garrot d'Islande" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Goglu des prés" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Grive de Bicknell" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Moucherelle à coté olive" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Petit blongios" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Pygargue à tête blanche" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Bécasseau maubèche rufa" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Bruant sauterelle pratensis" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Grèbe eslcavon" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Martinet ramoneur" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Paruline à ailes dorées" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Paruline azurée" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Pic à tête rouge" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Pie-grièche migratrice" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Pluvier siffleur melodus" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Râle jaune" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Sterne caspienne" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Sterne de Dougall" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Aves",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Caribou des bois, écotype forestier" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Mammifère",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Chauve-souris rousse de l'Est" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Mammifère",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Ours blanc" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Mammifère",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Rorqual commun" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Mammifère",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Béluga" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Mammifère",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Carcajou" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Mammifère",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Caribou des bois, écotype montagnard" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Mammifère",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Chauve-souris nordique" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Mammifère",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Petite chauve-souris brune" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Mammifère",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
         },
         "Pipistrelle de l'Est" : {
             "Nom scientifique" : "",
-            "Classe" : "",
+            "Classe" : "Mammifère",
             "Ordre" : "",
             "Famille" : "",
             "Vulnerabilité" : ""
