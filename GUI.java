@@ -11,6 +11,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -248,7 +249,7 @@ public class App extends Application {
         Button close = new Button("Fermer", new ImageView(closeImage));
 
         //ladybug2
-        Animals ladybug2 = new Animals("Coccinelle à deux points", "Adalia bipunctata", "Insecte","Colleoptère", "Coccinellidae", "Vulnérable", "Concurrence avec d'autres \n espèces telle que la coccinelle à sept points et \n la coccinelle asiatique ", "");
+        Animals ladybug2 = new Animals("Coccinelle à deux points", "Adalia bipunctata", "Insecte","Colleoptère", "Coccinellidae", "Vulnérable", "Concurrence avec d'autres \nespèces telle que la coccinelle à sept points et \nla coccinelle asiatique ", "");
         Text title = new Text(ladybug2.animalName);
         title.setFont(Font.font("Comic Sans Ms", 40 ));
         Text scientific = new Text("Nom scientifique: " + ladybug2.latinName);
@@ -273,6 +274,7 @@ public class App extends Application {
         Image animalPic2 = new Image("https://inpn.mnhn.fr/photos/uploads/webtofs/inpn/9/351989.jpg");
         ImageView image = new ImageView();
         image.setImage(animalPic2);
+        Button closeL2 = new Button("Fermer", new ImageView (closeImage));
 
         GridPane gpLadybug2 = new GridPane();
         gpLadybug2.setPadding(new Insets(25, 25, 25, 25));
@@ -283,6 +285,7 @@ public class App extends Application {
         gpLadybug2.add(info, 0,0); 
         gpLadybug2.add(image, 1, 0);
         layoutLadybug2.setCenter(gpLadybug2);
+        layoutLadybug2.setTop(closeL2);
         StackPane rootLadybug2 = new StackPane();
         rootLadybug2.getChildren().addAll(layoutLadybug2);
         Scene sceneInsect1 = new Scene(rootLadybug2, 2300, 1600);
@@ -309,6 +312,7 @@ public class App extends Application {
 
         Image b = new Image("https://img.lapresse.ca/924x615/201701/11/1330486-bourdons-actuellement-presents-seulement-13.jpg", 615, 410, true, true);
         ImageView bumblebeePic = new ImageView(b);
+        Button closeBourdon = new Button("Fermer", new ImageView (closeImage));
 
         BorderPane layoutBumblebee = new BorderPane();
         
@@ -323,7 +327,7 @@ public class App extends Application {
         // gp.add(populationBourdon, 0,4);
         // gp.add(bourdonPic2, 1, 4);
         // gp.add(sousImage, 0, 5);
-        layoutBumblebee.setTop(close);
+        layoutBumblebee.setTop(closeBourdon);
         layoutBumblebee.setCenter(gpBumblebee);
         
         StackPane rootBumbelbee = new StackPane();
@@ -351,6 +355,7 @@ public class App extends Application {
 
         Image c = new Image("https://www.canada.ca/content/dam/eccc/migration/sara/2022/08567272-bb31-439d-959a-394a6a12aae1/fig01.jpg");
         ImageView picLadybug9 = new ImageView(c);
+        Button closeL9 = new Button("Fermer", new ImageView (closeImage));
 
         BorderPane layoutLadybug9 = new BorderPane();
         
@@ -364,7 +369,7 @@ public class App extends Application {
         gpLadybug9.add(picLadybug9, 1, 0);
         // gpLadybug9.add(description, 1, 2);
         layoutLadybug9.setCenter(gpLadybug9);
-        layoutLadybug9.setTop(close);
+        layoutLadybug9.setTop(closeL9);
 
         root = new StackPane();
         root.getChildren().add(layoutLadybug9);
@@ -397,6 +402,7 @@ public class App extends Application {
         ImageView cuivrePic = new ImageView(cui);
         Image demoCui = new Image("https:www.natureconservancy.ca/assets/images/graphics/nat/maps/salt-marsh-copper-map-NCC-1000px-custom.jpg");
         ImageView demoCuivre = new ImageView(demoCui);
+        Button closeCuivre = new Button("Fermer", new ImageView (closeImage));
 
         GridPane gpCuivre = new GridPane();
         gpCuivre.setPadding(new Insets(25, 25, 25, 25));
@@ -409,7 +415,7 @@ public class App extends Application {
         gpCuivre.add(demoCuivre, 0,2);
         // gp.add(bourdonPic2, 1, 4);
         // gp.add(sousImage, 0, 5);
-        layoutCuivre.setTop(close);
+        layoutCuivre.setTop(closeCuivre);
         layoutCuivre.setCenter(gpCuivre);
 
         StackPane rootCuivre = new StackPane();
@@ -445,6 +451,7 @@ public class App extends Application {
         centerLayoutSatyre.setPadding(new Insets(75,25,50,25));
         Image s = new Image("https://acadienouvelle-6143.kxcdn.com/wp-content/uploads/2021/12/SL_Satyre-fauve_Maritimes.jpg");
         ImageView satyrePic = new ImageView(s);
+        Button closeSatyre = new Button("Fermer", new ImageView (closeImage));
         
         GridPane gpSatyre = new GridPane();
         gpSatyre.setPadding(new Insets(25, 25, 25, 25));
@@ -454,38 +461,231 @@ public class App extends Application {
         info.getChildren().addAll(title, scientific, classe, ordre, famille, vulnerability, reason, description);
         gpSatyre.add(info, 0,0); 
         gpSatyre.add(satyrePic, 1, 0);
-        // gp.add(populationBourdon, 0,4);
-        // gp.add(bourdonPic2, 1, 4);
-        // gp.add(sousImage, 0, 5);
-        layoutSatyre.setTop(close);
+        layoutSatyre.setTop(closeSatyre);
         layoutSatyre.setCenter(gpSatyre);
         
-
         StackPane rootSatyre = new StackPane();
         rootSatyre.getChildren().addAll(layoutSatyre);
         Scene sceneInsect5 = new Scene(rootSatyre, 2300, 1600);
 
+        //alose Savoureuse
+        Animals aloseS = new Animals("Alose savoureuse", "Alosa sapidissima","Actinopterygii", "Clupeiforme", "Clupeidae", "Vulnérable", "", "");
+        title = new Text(aloseS.animalName);
+        title.setFont(Font.font("Comic Sans Ms", 40 ));
+         scientific = new Text("Nom scientifique: " + aloseS.latinName);
+        scientific.setFont(Font.font("Comic Sans Ms", 25 ));
+         classe = new Text("Classe: " + aloseS. animalClass);
+        classe.setFont(Font.font("Comic Sans Ms", 25 ));
+         ordre = new Text("Ordre: " + aloseS.order);
+        ordre.setFont(Font.font("Comic Sans Ms", 25 ));
+         famille = new Text("Famille: " + aloseS.family);
+        famille.setFont(Font.font("Comic Sans Ms", 25 ));
+         vulnerability = new Text("Vulnerablité: " + aloseS.threatened);
+        vulnerability.setFont(Font.font("Comic Sans Ms", 25 ));
+        // reason = new Text("Raison de vulnérabilité: " + aloseS.reason);
+        // reason.setFont(Font.font("Comic Sans Ms", 20));
+        // reason = new Text("Raison de vulnérabilité: " + aloseS.reason);
+        // reason.setFont(Font.font("Comic Sans Ms", 20));
+        // description = new Text("Petite description de l'espèce: \n" + aloseS.description);
+        // description.setFont(Font.font("Comic Sans Ms", 15));
+
+        BorderPane layoutAlose = new BorderPane();
+        Image aloseSa = new Image("https://cdn-contenu.quebec.ca/cdn-contenu/faune/images/Fiches/Poissons/IMG_Alose-savoureuse.jpg");
+        ImageView alosePic = new ImageView(aloseSa);
+        Button closeA = new Button("Fermer", new ImageView (closeImage));
+        
+        GridPane gpAlose = new GridPane();
+        gpAlose.setPadding(new Insets(25, 25, 25, 25));
+        gpAlose.setAlignment(Pos.CENTER);
+        gpAlose.setVgap(10);
+        info = new VBox();
+        info.getChildren().addAll(title, scientific, classe, ordre, famille, vulnerability);
+        gpAlose.add(info, 0,0); 
+        gpAlose.add(alosePic, 1, 0);
+        layoutAlose.setTop(closeA);
+        layoutAlose.setCenter(gpAlose);
+        StackPane rootAlose = new StackPane();
+        rootAlose.getChildren().addAll(layoutAlose);
+        Scene sceneFish1 = new Scene(rootAlose, 2300, 1600);
+
+        //salamandre pourpre
+        Animals salamanderPourpre = new Animals("Salamandre pourpre","Gyrinophilus porphyriticus","Amphibien","Caudata","Plethodontidae", "Vulnérable", "Développement à but résidentiel, \nrecréotourisme, production d'énergie (comme les éoliennes) ", "La salamandre pourpre est une salamandre de ruisseau de grande taille \n(jusqu'à 20cm), qui se retrouve dans l'Est de l'Amerique du Nord. Au Québec, elle se trouve dans \nle sud-est de la province, plus précisément dans es appalaches. \nLa salamandre habite les ruiseaux de faible importance, avec un fond rocheux, au eaux claires et froides ainsi que bien oxigéné et sans poissons. ");
+
+        //ours blanc
+        Animals polarBear = new Animals("Ours blanc","Ursus maritimus","Mammifère","Carnivora","Ursidae", "Vulnérable", "Changement climatique (principalement), \npollution chimique (mercure), exploitation de pétrole et gaz naturel", "L'ours blanc, souvent appelé ours polaire,  \nest l'espèce d'ours la plus grande du monde. Cependant, du au réchauffement \nclimatique,l'ours blanc risque de perdre jusqu'à 40% du territoire qu'il occupe \ndurant l'été. ");
+        title = new Text(polarBear.animalName);
+        title.setFont(Font.font("Comic Sans Ms", 40 ));
+         scientific = new Text("Nom scientifique: " + polarBear.latinName);
+        scientific.setFont(Font.font("Comic Sans Ms", 25 ));
+         classe = new Text("Classe: " + polarBear. animalClass);
+        classe.setFont(Font.font("Comic Sans Ms", 25 ));
+         ordre = new Text("Ordre: " + polarBear.order);
+        ordre.setFont(Font.font("Comic Sans Ms", 25 ));
+         famille = new Text("Famille: " + polarBear.family);
+        famille.setFont(Font.font("Comic Sans Ms", 25 ));
+         vulnerability = new Text("Vulnerablité: " + polarBear.threatened);
+        vulnerability.setFont(Font.font("Comic Sans Ms", 25 ));
+        reason = new Text("Raison de vulnérabilité: " + polarBear.reason);
+        reason.setFont(Font.font("Comic Sans Ms", 20));
+        reason = new Text("Raison de vulnérabilité: " + polarBear.reason);
+        reason.setFont(Font.font("Comic Sans Ms", 20));
+        description = new Text("Petite description de l'espèce: \n" + polarBear.description);
+        description.setFont(Font.font("Comic Sans Ms", 15));
+
+        BorderPane layoutPolarBear = new BorderPane();
+        Image polarBearImage = new Image("https://s.rfi.fr/media/display/bcbb5836-d8da-11ee-acaf-005056a90284/w:1280/p:1x1/GettyImages-508042289.jpg", 800, 800, true, true);
+        ImageView polarBearPic = new ImageView(polarBearImage);
+        Button closeOurs = new Button("Fermer", new ImageView(closeImage));
+        
+        GridPane gpPolarBear = new GridPane();
+        gpPolarBear.setPadding(new Insets(25, 25, 25, 25));
+        gpPolarBear.setAlignment(Pos.CENTER);
+        gpPolarBear.setVgap(10);
+        info = new VBox();
+        info.getChildren().addAll(title, scientific, classe, ordre, famille, vulnerability, reason, description);
+        gpPolarBear.add(info, 0,0); 
+        gpPolarBear.add(polarBearPic, 1, 0);
+        layoutPolarBear.setTop(closeOurs);
+        layoutPolarBear.setCenter(gpPolarBear);
+        StackPane rootPolarBear = new StackPane();
+        rootPolarBear.getChildren().addAll(layoutPolarBear);
+        Scene sceneMammal3 = new Scene(rootPolarBear, 2300, 1600);
+        
+        //beluga
+        Animals belugaWhale = new Animals("Béluga","Delphinapterus leucas","Mammifère","Cetacea","Monodontidae", "Menacé", "Contamination par substances toxiques, réchauffement climatique", "Vivant au dans le fjord du Saguenay ainsi que l'estuaire du Saint-Laurent, \nle béluga du Québec est l'espèces qui vit le plus au sud (les autres bélugas vivant dans l'Océan arctique). \nDe plus, le béluga est le seul cétacé vivant à l'année dans le Saint-Laurent. Le béluga est une espèces en voie de disparition et \ncompte environ entre 1500 et 2000 bélugas dans le Saint-Laurent.");
+        title = new Text(belugaWhale.animalName);
+        title.setFont(Font.font("Comic Sans Ms", 40 ));
+         scientific = new Text("Nom scientifique: " + belugaWhale.latinName);
+        scientific.setFont(Font.font("Comic Sans Ms", 25 ));
+         classe = new Text("Classe: " + belugaWhale. animalClass);
+        classe.setFont(Font.font("Comic Sans Ms", 25 ));
+         ordre = new Text("Ordre: " + belugaWhale.order);
+        ordre.setFont(Font.font("Comic Sans Ms", 25 ));
+         famille = new Text("Famille: " + belugaWhale.family);
+        famille.setFont(Font.font("Comic Sans Ms", 25 ));
+         vulnerability = new Text("Vulnerablité: " + belugaWhale.threatened);
+        vulnerability.setFont(Font.font("Comic Sans Ms", 25 ));
+        reason = new Text("Raison de vulnérabilité: " + belugaWhale.reason);
+        reason.setFont(Font.font("Comic Sans Ms", 20));
+        reason = new Text("Raison de vulnérabilité: " + belugaWhale.reason);
+        reason.setFont(Font.font("Comic Sans Ms", 20));
+        description = new Text("Petite description de l'espèce: \n" + belugaWhale.description);
+        description.setFont(Font.font("Comic Sans Ms", 15));
+
+        BorderPane layoutBeluga = new BorderPane();
+        Image belugaImage = new Image("https://i.cbc.ca/1.1918696.1472943894!/httpImage/li-beluga-cp7799047.jpg");
+        ImageView belugaPic = new ImageView(belugaImage);
+        Button closeB = new Button("Fermer", new ImageView (closeImage));
+        
+        GridPane gpBeluga = new GridPane();
+        gpBeluga.setPadding(new Insets(25, 25, 25, 25));
+        gpBeluga.setAlignment(Pos.CENTER);
+        gpBeluga.setVgap(10);
+        info = new VBox();
+        info.getChildren().addAll(title, scientific, classe, ordre, famille, vulnerability, reason, description);
+        gpBeluga.add(info, 0,0); 
+        gpBeluga.add(belugaPic, 1, 0);
+        layoutBeluga.setTop(closeB);
+        layoutBeluga.setCenter(gpBeluga);
+        StackPane rootBeluga = new StackPane();
+        rootBeluga.getChildren().addAll(layoutBeluga);
+        Scene sceneMammal5 = new Scene(rootBeluga, 2300, 1600);
+
+        //caribou Montagnard
+        Animals caribouBoisMontagnard = new Animals("Caribou des bois, écotype montagnard","Rangifer tarandus caribou","Mammifère","Artiodactyla","Cervidae", "Menacé", "Peturbations causés par l'activité humaine (exploitation, forestière, \n minière, etc.) ", "Présent en Gaspésie, le caribou des bois habite les sommets des McGerrigle et des Chic-Chocs. En Octobre 2021, \nla population des caribous des bois (écotype Montagnard) était éstimé à seulement 38. ");
+        title = new Text(caribouBoisMontagnard.animalName);
+        title.setFont(Font.font("Comic Sans Ms", 40 ));
+         scientific = new Text("Nom scientifique: " + caribouBoisMontagnard.latinName);
+        scientific.setFont(Font.font("Comic Sans Ms", 25 ));
+         classe = new Text("Classe: " + caribouBoisMontagnard. animalClass);
+        classe.setFont(Font.font("Comic Sans Ms", 25 ));
+         ordre = new Text("Ordre: " + caribouBoisMontagnard.order);
+        ordre.setFont(Font.font("Comic Sans Ms", 25 ));
+         famille = new Text("Famille: " + caribouBoisMontagnard.family);
+        famille.setFont(Font.font("Comic Sans Ms", 25 ));
+         vulnerability = new Text("Vulnerablité: " + caribouBoisMontagnard.threatened);
+        vulnerability.setFont(Font.font("Comic Sans Ms", 25 ));
+        reason = new Text("Raison de vulnérabilité: " + caribouBoisMontagnard.reason);
+        reason.setFont(Font.font("Comic Sans Ms", 20));
+        reason = new Text("Raison de vulnérabilité: " + caribouBoisMontagnard.reason);
+        reason.setFont(Font.font("Comic Sans Ms", 20));
+        description = new Text("Petite description de l'espèce: \n" + caribouBoisMontagnard.description);
+        description.setFont(Font.font("Comic Sans Ms", 15));
+
+        BorderPane layoutCaribouMontagnard = new BorderPane();
+        Image caribouMontagnardImage = new Image("https://naturequebec.org/wp-content/uploads/2021/06/PH-especes-menacees-caribouF.jpg");
+        ImageView caribouMontagnardPic = new ImageView(caribouMontagnardImage);
+        Button closeCM = new Button("Fermer", new ImageView (closeImage));
+        
+        GridPane gpCaribouMontagnard = new GridPane();
+        gpCaribouMontagnard.setPadding(new Insets(25, 25, 25, 25));
+        gpCaribouMontagnard.setAlignment(Pos.CENTER);
+        gpCaribouMontagnard.setVgap(10);
+        info = new VBox();
+        info.getChildren().addAll(title, scientific, classe, ordre, famille, vulnerability, reason, description);
+        gpCaribouMontagnard.add(info, 0,0); 
+        gpCaribouMontagnard.add(caribouMontagnardPic, 1, 0);
+        layoutCaribouMontagnard.setTop(closeCM);
+        layoutCaribouMontagnard.setCenter(gpCaribouMontagnard);
+        StackPane rootCaribouMontagnard = new StackPane();
+        rootCaribouMontagnard.getChildren().addAll(layoutCaribouMontagnard);
+        Scene sceneMammal7 = new Scene(rootCaribouMontagnard, 2300, 1600);
+
+        //start Scene
+        BorderPane startLayout = new BorderPane();
+        GridPane topLayout = new GridPane();
+        topLayout.setHgap(1);
+        topLayout.setVgap(1);
+        topLayout.setAlignment(Pos.CENTER);
+    
+        Text welcome = new Text("Apprenez sur les animaux menacés");
+        Button quebecButton = new Button("Québec");
+        topLayout.add(welcome, 0, 0 , 5, 2);
+        topLayout.add(quebecButton, 4, 2);
+        startLayout.setTop(topLayout);
+        welcome.setFont(Font.font("Comic Sans Ms", 50));            welcome.setFill(Color.ANTIQUEWHITE);
+        Image startPageImage = new Image("https://d3d0lqu00lnqvz.cloudfront.net/media/media/a97bb3a4-ac75-4b97-94e5-5fcb9fe2b922.jpg", 2300, 1600,false, false);
+        ImageView view = new ImageView();
+        view.setImage(startPageImage);
+        StackPane startRoot = new StackPane();
+        startRoot.getChildren().addAll(view, startLayout);
+        Scene startScene = new Scene(startRoot, 2300, 1600);
+
         //animals scene 
         root = new StackPane();
         layout.setCenter(centerLayout);
-        layout.setTop(heading);
+        layout.setTop(close);
         root.getChildren().add(layout);
         GridPane gp = new GridPane();
         gp.setPadding(new Insets(25, 25, 25, 25));
         gp.setAlignment(Pos.CENTER);
         gp.setVgap(10);
-        scene = new Scene(root, 2300, 1600);
-        stage.setScene(scene);
+        Scene sceneQuebec = new Scene(root, 2300, 1600);
+        stage.setScene(startScene);
         stage.show();
-        stage.setResizable(false);
+        
+        quebecButton.setOnAction(e -> stage.setScene(sceneQuebec));
+        close.setOnAction(e -> stage.setScene(startScene));
 
         insect1.setOnAction(e -> stage.setScene(sceneInsect1));
         insect2.setOnAction(e -> stage.setScene(sceneInsect2));
         insect3.setOnAction(e -> stage.setScene(sceneInsect3));
         insect4.setOnAction(e -> stage.setScene(sceneInsect4));
         insect5.setOnAction(e -> stage.setScene(sceneInsect5));
+        fish1.setOnAction(e -> stage.setScene(sceneFish1));
+        mammal3.setOnAction(e -> stage.setScene(sceneMammal3));
+        mammal5.setOnAction(e -> stage.setScene(sceneMammal5));
+        mammal7.setOnAction(e -> stage.setScene(sceneMammal7));
 
-        close.setOnAction(e -> stage.setScene(scene));
+        closeL2.setOnAction(e -> stage.setScene(sceneQuebec));
+        closeBourdon.setOnAction(e -> stage.setScene(sceneQuebec));
+        closeL9.setOnAction(e -> stage.setScene(sceneQuebec));
+        closeCuivre.setOnAction(e -> stage.setScene(sceneQuebec));
+        closeSatyre.setOnAction(e -> stage.setScene(sceneQuebec));
+        closeA.setOnAction(e -> stage.setScene(sceneQuebec));
+        closeOurs.setOnAction(e -> stage.setScene(sceneQuebec));
+        closeB.setOnAction(e -> stage.setScene(sceneQuebec));
+        closeCM.setOnAction(e -> stage.setScene(sceneQuebec));
     }
 
     public static void main(String[] args) {
