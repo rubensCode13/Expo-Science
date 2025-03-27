@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -21,10 +22,8 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     StackPane root;
-    Scene scene;
-    Scene scene2;
-    Stage stage;
-    Stage stage2;
+
+    final String appName = "MINATI";
 
     @Override
     public void start(Stage stage) {
@@ -439,8 +438,6 @@ public class App extends Application {
         vulnerability.setFont(Font.font("Comic Sans Ms", 25 ));
         reason = new Text("Raison de vulnérabilité: " + satyre.reason);
         reason.setFont(Font.font("Comic Sans Ms", 20));
-        reason = new Text("Raison de vulnérabilité: " + satyre.reason);
-        reason.setFont(Font.font("Comic Sans Ms", 20));
         description = new Text("Petite description de l'espèce: \n" + satyre.description);
         description.setFont(Font.font("Comic Sans Ms", 15));
 
@@ -484,8 +481,6 @@ public class App extends Application {
         vulnerability.setFont(Font.font("Comic Sans Ms", 25 ));
         // reason = new Text("Raison de vulnérabilité: " + aloseS.reason);
         // reason.setFont(Font.font("Comic Sans Ms", 20));
-        // reason = new Text("Raison de vulnérabilité: " + aloseS.reason);
-        // reason.setFont(Font.font("Comic Sans Ms", 20));
         // description = new Text("Petite description de l'espèce: \n" + aloseS.description);
         // description.setFont(Font.font("Comic Sans Ms", 15));
 
@@ -509,10 +504,205 @@ public class App extends Application {
         Scene sceneFish1 = new Scene(rootAlose, 2300, 1600);
 
         //salamandre pourpre
-        Animals salamanderPourpre = new Animals("Salamandre pourpre","Gyrinophilus porphyriticus","Amphibien","Caudata","Plethodontidae", "Vulnérable", "Développement à but résidentiel, \nrecréotourisme, production d'énergie (comme les éoliennes) ", "La salamandre pourpre est une salamandre de ruisseau de grande taille \n(jusqu'à 20cm), qui se retrouve dans l'Est de l'Amerique du Nord. Au Québec, elle se trouve dans \nle sud-est de la province, plus précisément dans es appalaches. \nLa salamandre habite les ruiseaux de faible importance, avec un fond rocheux, au eaux claires et froides ainsi que bien oxigéné et sans poissons. ");
+        Animals salamanderPourpre = new Animals("Salamandre pourpre","Gyrinophilus porphyriticus","Amphibien","Caudata","Plethodontidae", "Vulnérable", "Développement à but résidentiel, \nrecréotourisme, production d'énergie (comme les éoliennes) ", "La salamandre pourpre est une salamandre de ruisseau de grande taille \n(jusqu'à 20cm), qui se retrouve dans l'Est de l'Amerique du Nord. Au Québec, elle se trouve dans \nle sud-est de la province, plus précisément dans es appalaches. \nLa salamandre habite les ruiseaux de faible importance, avec un fond rocheux, au eaux claires et froides \nainsi que bien oxigéné et sans poissons. ");
+
+        title = new Text(salamanderPourpre.animalName);
+        title.setFont(Font.font("Comic Sans Ms", 40 ));
+         scientific = new Text("Nom scientifique: " + salamanderPourpre.latinName);
+        scientific.setFont(Font.font("Comic Sans Ms", 25 ));
+         classe = new Text("Classe: " + salamanderPourpre. animalClass);
+        classe.setFont(Font.font("Comic Sans Ms", 25 ));
+         ordre = new Text("Ordre: " + salamanderPourpre.order);
+        ordre.setFont(Font.font("Comic Sans Ms", 25 ));
+         famille = new Text("Famille: " + salamanderPourpre.family);
+        famille.setFont(Font.font("Comic Sans Ms", 25 ));
+         vulnerability = new Text("Vulnerablité: " + salamanderPourpre.threatened);
+        vulnerability.setFont(Font.font("Comic Sans Ms", 25 ));
+        reason = new Text("Raison de vulnérabilité: " + salamanderPourpre.reason);
+        reason.setFont(Font.font("Comic Sans Ms", 20));
+        description = new Text("Petite description de l'espèce: \n" + salamanderPourpre.description);
+        description.setFont(Font.font("Comic Sans Ms", 15));
+
+        BorderPane layoutSalamanderP = new BorderPane();
+        Image imageSalamanderP = new Image("https://upload.wikimedia.org/wikipedia/commons/7/75/Gyrinophilus_po%281%29.jpg");
+        ImageView picSalamanderP = new ImageView(imageSalamanderP);
+        Button closeSalamanderP = new Button("Fermer", new ImageView(closeImage));
+        
+        GridPane gpSalamanderP = new GridPane();
+        gpSalamanderP.setPadding(new Insets(25, 25, 25, 25));
+        gpSalamanderP.setAlignment(Pos.CENTER);
+        gpSalamanderP.setVgap(10);
+        info = new VBox();
+        info.getChildren().addAll(title, scientific, classe, ordre, famille, vulnerability, reason, description);
+        gpSalamanderP.add(info, 0,0); 
+        gpSalamanderP.add(picSalamanderP, 1, 0);
+        layoutSalamanderP.setTop(closeSalamanderP);
+        layoutSalamanderP.setCenter(gpSalamanderP);
+        StackPane rootSalamanderP = new StackPane();
+        rootSalamanderP.getChildren().addAll(layoutSalamanderP);
+        Scene sceneAmphibian1 = new Scene(rootSalamanderP, 2300, 1600);
+
+        //rainette faux-grillon
+        Animals rainetteGrillon = new Animals("Rainette faux-grillon de l'Ouest","Pseudacris triseriata","Amphibien","Anura","Hylidae", "Menacé", "Destruction de son habitat, fertilisant et \npesticides, espèces exotiques envahissantes, etc. ", "La rainette faux-Grillon de l'Ouest est une petite grenouille \nqui pèse environ 1g. Cette espèce vit seulement en Amérique du Nord, au Québec, \nelle se trouve Ouataouais et en Montérégie. Cependant, entre 2004 et 2009, elle a perdu plus de \n15% des ses sites de reproduction en Montérégie et \n30% de ceux en Ouataouais. ");
+
+        title = new Text(rainetteGrillon.animalName);
+        title.setFont(Font.font("Comic Sans Ms", 40 ));
+         scientific = new Text("Nom scientifique: " + rainetteGrillon.latinName);
+        scientific.setFont(Font.font("Comic Sans Ms", 25 ));
+         classe = new Text("Classe: " + rainetteGrillon. animalClass);
+        classe.setFont(Font.font("Comic Sans Ms", 25 ));
+         ordre = new Text("Ordre: " + rainetteGrillon.order);
+        ordre.setFont(Font.font("Comic Sans Ms", 25 ));
+         famille = new Text("Famille: " + rainetteGrillon.family);
+        famille.setFont(Font.font("Comic Sans Ms", 25 ));
+         vulnerability = new Text("Vulnerablité: " + rainetteGrillon.threatened);
+        vulnerability.setFont(Font.font("Comic Sans Ms", 25 ));
+        reason = new Text("Raison de vulnérabilité: " + rainetteGrillon.reason);
+        reason.setFont(Font.font("Comic Sans Ms", 20));
+        description = new Text("Petite description de l'espèce: \n" + rainetteGrillon.description);
+        description.setFont(Font.font("Comic Sans Ms", 15));
+
+        BorderPane layoutRainette = new BorderPane();
+        Image rainetteImage = new Image("https://cdn-contenu.quebec.ca/cdn-contenu/faune/images/OG/Fiches/Amphibiens/OG-FB_RFGO_MELCCFP.jpg", 800, 400, true, true);
+        ImageView rainettePic = new ImageView(rainetteImage);
+        Button closeRainette = new Button("Fermer", new ImageView(closeImage));
+        
+        GridPane gpRainette = new GridPane();
+        gpRainette.setPadding(new Insets(25, 25, 25, 25));
+        gpRainette.setAlignment(Pos.CENTER);
+        gpRainette.setVgap(10);
+        info = new VBox();
+        info.getChildren().addAll(title, scientific, classe, ordre, famille, vulnerability, reason, description);
+        gpRainette.add(info, 0,0); 
+        gpRainette.add(rainettePic, 1, 0);
+        layoutRainette.setTop(closeRainette);
+        layoutRainette.setCenter(gpRainette);
+        StackPane rootRainette = new StackPane();
+        rootRainette.getChildren().addAll(layoutRainette);
+        Scene sceneAmphibian2 = new Scene(rootRainette, 2300, 1600);
+
+        //salamandre sombre
+
+        Animals salamandreSombre = new Animals("Salamandre sombre des montagnes ","Desmognathus ochrophaeus ","Amphibien ","Caudata ","Plethodontidae ", "Menacé ", "", "");
+        title = new Text(salamandreSombre.animalName);
+        title.setFont(Font.font("Comic Sans Ms", 40 ));
+         scientific = new Text("Nom scientifique: " + salamandreSombre.latinName);
+        scientific.setFont(Font.font("Comic Sans Ms", 25 ));
+         classe = new Text("Classe: " + salamandreSombre. animalClass);
+        classe.setFont(Font.font("Comic Sans Ms", 25 ));
+         ordre = new Text("Ordre: " + salamandreSombre.order);
+        ordre.setFont(Font.font("Comic Sans Ms", 25 ));
+         famille = new Text("Famille: " + salamandreSombre.family);
+        famille.setFont(Font.font("Comic Sans Ms", 25 ));
+         vulnerability = new Text("Vulnerablité: " + salamandreSombre.threatened);
+        vulnerability.setFont(Font.font("Comic Sans Ms", 25 ));
+        reason = new Text("Raison de vulnérabilité: " + salamandreSombre.reason);
+        reason.setFont(Font.font("Comic Sans Ms", 20));
+        description = new Text("Petite description de l'espèce: \n" + salamandreSombre.description);
+        description.setFont(Font.font("Comic Sans Ms", 15));
+
+        BorderPane layoutSalamandreSombre = new BorderPane();
+        Image image_ = new Image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRua6yE_cbkId6UVXhI7yPnEYCAHN0GX1BZww&s", 800, 400, true, true);
+        ImageView salamandreSombrePic = new ImageView(image_);
+        Button closeSalamandreSombre = new Button("Fermer", new ImageView(closeImage));
+        
+        GridPane gpSalamandreSombre = new GridPane();
+        gpSalamandreSombre.setPadding(new Insets(25, 25, 25, 25));
+        gpSalamandreSombre.setAlignment(Pos.CENTER);
+        gpSalamandreSombre.setVgap(10);
+        info = new VBox();
+        info.getChildren().addAll(title, scientific, classe, ordre, famille, vulnerability, reason, description);
+        gpSalamandreSombre.add(info, 0,0); 
+        gpSalamandreSombre.add(salamandreSombrePic, 1, 0);
+        layoutSalamandreSombre.setTop(closeSalamandreSombre);
+        layoutSalamandreSombre.setCenter(gpSalamandreSombre);
+        StackPane rootSalamanderSombre = new StackPane();
+        rootSalamanderSombre.getChildren().addAll(layoutSalamandreSombre);
+        Scene sceneAmphibian3 = new Scene(rootSalamanderSombre, 2300, 1600);
+
+        //tortue luth
+        Animals luthTortue = new Animals("Tortue luth","Dermochelys coriacea","Reptile","Testudine","Dermochelydae", "Menacé", "Braconnage, pollution marine \n(sacs plastiques), pêche ", "La tortue luth est la seul espèce de tortue marine au Québec. \nDe plus, il s'agit de la plus grosse tortue au monde (2.4m de long pour 3.6m de large). \nNe résidant pas au Québec à l'année, elle ne reste que durant l'été, durant lequel elle habite \nle golfe du Saint-Laurent ");
+
+        title = new Text(luthTortue.animalName);
+        title.setFont(Font.font("Comic Sans Ms", 40 ));
+         scientific = new Text("Nom scientifique: " + luthTortue.latinName);
+        scientific.setFont(Font.font("Comic Sans Ms", 25 ));
+         classe = new Text("Classe: " + luthTortue. animalClass);
+        classe.setFont(Font.font("Comic Sans Ms", 25 ));
+         ordre = new Text("Ordre: " + luthTortue.order);
+        ordre.setFont(Font.font("Comic Sans Ms", 25 ));
+         famille = new Text("Famille: " + luthTortue.family);
+        famille.setFont(Font.font("Comic Sans Ms", 25 ));
+         vulnerability = new Text("Vulnerablité: " + luthTortue.threatened);
+        vulnerability.setFont(Font.font("Comic Sans Ms", 25 ));
+        reason = new Text("Raison de vulnérabilité: " + luthTortue.reason);
+        reason.setFont(Font.font("Comic Sans Ms", 20));
+        reason = new Text("Raison de vulnérabilité: " + luthTortue.reason);
+        reason.setFont(Font.font("Comic Sans Ms", 20));
+        description = new Text("Petite description de l'espèce: \n" + luthTortue.description);
+        description.setFont(Font.font("Comic Sans Ms", 15));
+
+        BorderPane layoutLuth = new BorderPane();
+        Image luthImage = new Image("https://cdn-contenu.quebec.ca/cdn-contenu/faune/images/OG/Fiches/Reptiles/OG-FB_Tortue-luth_Louisabelle_Gagnon.jpg", 800, 800, true, true);
+        ImageView luthPic = new ImageView(luthImage);
+        Button closeLuth = new Button("Fermer", new ImageView(closeImage));
+        
+        GridPane gpLuth = new GridPane();
+        gpLuth.setPadding(new Insets(25, 25, 25, 25));
+        gpLuth.setAlignment(Pos.CENTER);
+        gpLuth.setVgap(10);
+        info = new VBox();
+        info.getChildren().addAll(title, scientific, classe, ordre, famille, vulnerability, reason, description);
+        gpLuth.add(info, 0,0); 
+        gpLuth.add(luthPic, 1, 0);
+        layoutLuth.setTop(closeLuth);
+        layoutLuth.setCenter(gpLuth);
+        StackPane rootLuth = new StackPane();
+        rootLuth.getChildren().addAll(layoutLuth);
+        Scene sceneReptile5 = new Scene(rootLuth, 2300, 1600);
+
+        //pygargue à tete blanche
+        Animals pygargueBlanche = new Animals("Pygargue à tete blanche","Haliaeetus leucocephalus","Aves","Accipitriforme","Accipitridae", "Vulnérable", "Perte d'habitat, pesticides, \nbraconnage, collision avec véhicules, etc.", "La pygargue à tête blanche est un oiseau \nde proie diurne au sommet de la chaine alimentaire. Cette espèce, \nprésentement vulnérable, est en situation de se rétablir. Durant l'automne, plusieurs individus \nmigrent vers les océans Pacifiques et Atlantique, \nmais de plus en plus restent dans la province durant tout l'hiver. ");
+        title = new Text(pygargueBlanche.animalName);
+        title.setFont(Font.font("Comic Sans Ms", 40 ));
+         scientific = new Text("Nom scientifique: " + pygargueBlanche.latinName);
+        scientific.setFont(Font.font("Comic Sans Ms", 25 ));
+         classe = new Text("Classe: " + pygargueBlanche. animalClass);
+        classe.setFont(Font.font("Comic Sans Ms", 25 ));
+         ordre = new Text("Ordre: " + pygargueBlanche.order);
+        ordre.setFont(Font.font("Comic Sans Ms", 25 ));
+         famille = new Text("Famille: " + pygargueBlanche.family);
+        famille.setFont(Font.font("Comic Sans Ms", 25 ));
+         vulnerability = new Text("Vulnerablité: " + pygargueBlanche.threatened);
+        vulnerability.setFont(Font.font("Comic Sans Ms", 25 ));
+        reason = new Text("Raison de vulnérabilité: " + pygargueBlanche.reason);
+        reason.setFont(Font.font("Comic Sans Ms", 20));
+        reason = new Text("Raison de vulnérabilité: " + pygargueBlanche.reason);
+        reason.setFont(Font.font("Comic Sans Ms", 20));
+        description = new Text("Petite description de l'espèce: \n" + pygargueBlanche.description);
+        description.setFont(Font.font("Comic Sans Ms", 15));
+
+        BorderPane layoutPygargue = new BorderPane();
+        Image pygargueImage = new Image("https://www.oiseauxparlacouleur.com/I/Pygargue_tete_blanche3.jpg", 800, 800, true, true);
+        ImageView pygarguePic = new ImageView(pygargueImage);
+        Button closePygargue = new Button("Fermer", new ImageView(closeImage));
+        
+        GridPane gpPygargue = new GridPane();
+        gpPygargue.setPadding(new Insets(25, 25, 25, 25));
+        gpPygargue.setAlignment(Pos.CENTER);
+        gpPygargue.setVgap(10);
+        info = new VBox();
+        info.getChildren().addAll(title, scientific, classe, ordre, famille, vulnerability, reason, description);
+        gpPygargue.add(info, 0,0); 
+        gpPygargue.add(pygarguePic, 1, 0);
+        layoutPygargue.setTop(closePygargue);
+        layoutPygargue.setCenter(gpPygargue);
+        StackPane rootPygargue = new StackPane();
+        rootPygargue.getChildren().addAll(layoutPygargue);
+        Scene sceneBird10 = new Scene(rootPygargue, 2300, 1600);
 
         //ours blanc
-        Animals polarBear = new Animals("Ours blanc","Ursus maritimus","Mammifère","Carnivora","Ursidae", "Vulnérable", "Changement climatique (principalement), \npollution chimique (mercure), exploitation de pétrole et gaz naturel", "L'ours blanc, souvent appelé ours polaire,  \nest l'espèce d'ours la plus grande du monde. Cependant, du au réchauffement \nclimatique,l'ours blanc risque de perdre jusqu'à 40% du territoire qu'il occupe \ndurant l'été. ");
+        Animals polarBear = new Animals("Ours blanc","Ursus maritimus","Mammifère","Carnivora","Ursidae", "Vulnérable", "Changement climatique (principalement), \npollution chimique (mercure), exploitation de pétrole et gaz naturel ", "L'ours blanc, souvent appelé ours polaire,  \nest l'espèce d'ours la plus grande du monde. Cependant, du au réchauffement \nclimatique,l'ours blanc risque de perdre jusqu'à 40% du territoire qu'il occupe \ndurant l'été. ");
         title = new Text(polarBear.animalName);
         title.setFont(Font.font("Comic Sans Ms", 40 ));
          scientific = new Text("Nom scientifique: " + polarBear.latinName);
@@ -632,24 +822,54 @@ public class App extends Application {
         Scene sceneMammal7 = new Scene(rootCaribouMontagnard, 2300, 1600);
 
         //start Scene
-        BorderPane startLayout = new BorderPane();
-        GridPane topLayout = new GridPane();
-        topLayout.setHgap(1);
-        topLayout.setVgap(1);
-        topLayout.setAlignment(Pos.CENTER);
-    
-        Text welcome = new Text("Apprenez sur les animaux menacés");
+        Text minami = new Text(appName);
+        minami.setFont(Font.font("TT supermolot neue", 75));
+        minami.setFill(Color.BLACK);
+        VBox top = new VBox();
+        top.getChildren().add(minami);
+        top.setAlignment(Pos.CENTER);
+        Image forest = new Image("https://plus.unsplash.com/premium_photo-1675355675464-2deabb1f893b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 500, 500, true, true);
+        ImageView background = new ImageView(forest);
+        Button start = new Button("Commencer");
+        VBox bottom = new VBox();
+        bottom.getChildren().add(start);
+        bottom.setAlignment(Pos.CENTER);
+        BorderPane layout1 = new BorderPane();
+        layout1.setTop(top);
+        layout1.setBottom(bottom);
+        root = new StackPane();
+        root.getChildren().addAll(layout1, background);
+        Scene startScene = new Scene(root, 500, 500);
+
+        //choice Scene
+        Text question = new Text("Sur quelle endroit voulez-vous apprendre");
+        question.setFont(Font.font("Comic sans ms", 25));
+        question.setFill(Color.BLACK);
+        HBox questionH = new HBox();
+        questionH.getChildren().add(question);
+        questionH.setAlignment(Pos.CENTER);
         Button quebecButton = new Button("Québec");
-        topLayout.add(welcome, 0, 0 , 5, 2);
-        topLayout.add(quebecButton, 4, 2);
-        startLayout.setTop(topLayout);
-        welcome.setFont(Font.font("Comic Sans Ms", 50));            welcome.setFill(Color.ANTIQUEWHITE);
-        Image startPageImage = new Image("https://d3d0lqu00lnqvz.cloudfront.net/media/media/a97bb3a4-ac75-4b97-94e5-5fcb9fe2b922.jpg", 2300, 1600,false, false);
-        ImageView view = new ImageView();
-        view.setImage(startPageImage);
-        StackPane startRoot = new StackPane();
-        startRoot.getChildren().addAll(view, startLayout);
-        Scene startScene = new Scene(startRoot, 2300, 1600);
+        Button canada =  new Button("Canada");
+        Button northAmerica = new Button("Amérique du Nord");
+        Button southAmerica = new Button("Amérique du Sud");
+        Button europe = new Button("Europe");
+        Button asia = new Button("Asie");
+        Button oceania = new Button("Oceanie");
+        Button africa = new Button("Afrique");
+        VBox continents = new VBox();
+        continents.getChildren().addAll(quebecButton, canada, northAmerica, southAmerica, europe, asia, oceania, africa);
+        continents.setAlignment(Pos.CENTER);
+        Image polarB = new Image("https://www.wwf.fr/sites/default/files/styles/page_cover_large_16_9/public/2019-02/Medium_WW225900-min.jpg?h=c3635fa2&itok=gijpSl-c", 575, 260, false, true);
+        ImageView startImage = new ImageView(polarB);
+            
+        VBox choice = new VBox();
+        choice.getChildren().addAll(questionH, continents, startImage);
+        BorderPane layoutChoice = new BorderPane();
+        layoutChoice.setCenter(choice);
+        root = new StackPane();
+        root.getChildren().addAll(layoutChoice);
+        Scene choiceScene = new Scene(root, 500, 500);
+        choiceScene.getStylesheets().addAll(this.getClass().getResource("style.css").toExternalForm());
 
         //animals scene 
         root = new StackPane();
@@ -664,8 +884,9 @@ public class App extends Application {
         stage.setScene(startScene);
         stage.show();
         
+        start.setOnAction(e -> stage.setScene(choiceScene));
         quebecButton.setOnAction(e -> stage.setScene(sceneQuebec));
-        close.setOnAction(e -> stage.setScene(startScene));
+        close.setOnAction(e -> stage.setScene(choiceScene));
 
         insect1.setOnAction(e -> stage.setScene(sceneInsect1));
         insect2.setOnAction(e -> stage.setScene(sceneInsect2));
@@ -673,6 +894,11 @@ public class App extends Application {
         insect4.setOnAction(e -> stage.setScene(sceneInsect4));
         insect5.setOnAction(e -> stage.setScene(sceneInsect5));
         fish1.setOnAction(e -> stage.setScene(sceneFish1));
+        amphibian1.setOnAction(e -> stage.setScene(sceneAmphibian1));
+        amphibian2.setOnAction(e -> stage.setScene(sceneAmphibian2));
+        amphibian3.setOnAction(e -> stage.setScene(sceneAmphibian3));
+        reptile5.setOnAction(e -> stage.setScene(sceneReptile5));
+        bird10.setOnAction(e -> stage.setScene(sceneBird10));
         mammal3.setOnAction(e -> stage.setScene(sceneMammal3));
         mammal5.setOnAction(e -> stage.setScene(sceneMammal5));
         mammal7.setOnAction(e -> stage.setScene(sceneMammal7));
@@ -683,6 +909,11 @@ public class App extends Application {
         closeCuivre.setOnAction(e -> stage.setScene(sceneQuebec));
         closeSatyre.setOnAction(e -> stage.setScene(sceneQuebec));
         closeA.setOnAction(e -> stage.setScene(sceneQuebec));
+        closeSalamanderP.setOnAction(e -> stage.setScene(sceneQuebec));
+        closeRainette.setOnAction(e -> stage.setScene(sceneQuebec));
+        closeSalamandreSombre.setOnAction(e -> stage.setScene(sceneQuebec));
+        closeLuth.setOnAction(e -> stage.setScene(sceneQuebec));
+        closePygargue.setOnAction(e -> stage.setScene(sceneQuebec));
         closeOurs.setOnAction(e -> stage.setScene(sceneQuebec));
         closeB.setOnAction(e -> stage.setScene(sceneQuebec));
         closeCM.setOnAction(e -> stage.setScene(sceneQuebec));
